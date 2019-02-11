@@ -1,0 +1,40 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "browserify -d app/scripts/src/main.js -o app/scripts/dist/main.js",
+    "watch": "watchify -v -d app/scripts/src/main.js -o app/scripts/dist/main.js"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ],
+          "sourceMap": true
+        }
+      ]
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.3",
+    "jquery": "file:node_modules/jquery",
+    "nodemon": "^1.18.9",
+    "watchify": "^3.11.0"
+  },
+  "dependencies": {
+    "ws": "^6.1.0"
+  }
+}

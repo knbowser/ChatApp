@@ -1,0 +1,1 @@
+console.error("Error: ELOOP: too many symbolic links encountered, stat 'C:\\Users\\k-sizzle\\Documents\\chatapp\\node_modules\\jquery'");
